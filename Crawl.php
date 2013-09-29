@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class ="container"><br />
-<h1 id="heading">TNC-to be changed</h1><br />
+<h1>xCulture</h1><br />
 <div id="form-details">
 <form action='crawl.php'>
 <span id = "select-option">Select Please:</span>
@@ -65,18 +65,17 @@ break;
 ?>
 
 </table>
-<footer>
-	<div class="footer-text">
-	    <ul class="social-icons">
+<?php
 
-          <a href="http://facebook.com/tnc">Facebook</a>
-          <a href="http://twitter.com/tnc">Twitter</a>
-          <a href="http://github.com/codehunks/tnc">Github</a>
-      </ul>
-    <span id="copyright">(c) Codehunks 2013 Designed and coded by Codehunks Team.</span>
-    </div>
-</footer>
+$countries = explode('$',$_GET['data']);
+echo "recieved country names : ";
+print_r(join(",",array_values($countries)));
 
+?>
+</br>
+<div class="navbar navbar-fixed-bottom">
+   <div class="container text-center">&copy. 2013 codehunks. All rights reserved</div>
+</div>
 </div>
 </body>
 </html>
