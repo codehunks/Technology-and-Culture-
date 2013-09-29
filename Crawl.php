@@ -1,8 +1,15 @@
-
-bhaiyon right now it works for some selected and popular countries  like india china etc... try!!!!!
-
+<html>
+<head>
+<title>Tech N Culture</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+</head>
+<body>
+<div class ="container"><br />
+<div id="form-details">
 <form action='crawl.php'>
-Select Please: <br>
+<span id = "select-option">Select Please:</span>
 <select id="countries" name="cat">
 <option value="Afghanistan">Afghanistan</option>
 <option value="Åland Islands">Åland Islands</option>
@@ -250,15 +257,17 @@ Select Please: <br>
 <option value="Zimbabwe">Zimbabwe</option>
 </select>
 <br>
-<input type=submit>
+<input type="submit" class="btn btn-success">
 </form>
-<table>
+</div>
+<table class="table">
 
 <?php
 include "Crawler.php";
 if(isset($_GET["cat"]))
 {
 $cat = $_GET["cat"];
+echo "<legend id=\"legend\">About ".$cat."</legend>";
 $url = "http://www.kwintessential.co.uk/resources/global-etiquette/$cat-country-profile.html";
 $html= file_get_contents($url);
 $dom = new DOMDocument();
@@ -271,13 +280,13 @@ foreach ($elements as $e)
 if($x > 8){
 echo "<h2>".$e->nodeValue. "</h2><br />";
 $z = $e->nextSibling->nextSibling->nextSibling;
-echo $z->nodeValue. "<br />";
+echo "<p id=\"data-info\"> ". $z->nodeValue. "</p><br />";
 }
 else
 {
 echo "<h2>".$e->nodeValue. "</h2><br />";
 $z = $e->nextSibling;
-echo $z->nodeValue. "<br />";
+echo "<p id=\"data-info\" >". $z->nodeValue. "</p><br />";
 }
 $x++;
 if($x == 19)
@@ -287,3 +296,20 @@ break;
 }
 }
 ?>
+
+</table>
+<footer>
+	<div class="footer-text">
+	    <ul class="social-icons">
+
+          <a href="http://facebook.com/tnc">Facebook</a>
+          <a href="http://twitter.com/tnc">Twitter</a>
+          <a href="http://github.com/codehunks/tnc">Github</a>
+      </ul>
+    <span id="copyright">(c) Codehunks 2013 Designed and coded by Codehunks Team.</span>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
