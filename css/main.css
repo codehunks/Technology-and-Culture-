@@ -1,0 +1,41 @@
+#legend {
+	font-size: 28px;
+	color: #5c9be0;
+	font-weight: bold;
+	text-align: center;
+}
+
+#data-info {
+	font-size: 20px;
+	color: #222222;
+	line-height: 1.2em;
+	font-family: Helvetica Arial Serif ;
+
+}
+
+#form-details {
+	text-align: center;
+	padding: 2px;
+}
+
+#select-option {
+	font-family: serif;
+	font-size: 24px;
+
+}
+footer {
+	height: 200px;
+	border-top: 1px solid #222222;
+	padding-top: 3px; 
+}
+.footer-text {
+	text-align: center;
+	padding: 5px;
+}
+
+#copyright{
+	padding: 5px;
+	font-size: 16px;
+	color : #222222;
+	text-align: center;
+}
