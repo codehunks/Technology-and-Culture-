@@ -1,12 +1,13 @@
 <html>
 <head>
-<title>Tech N Culture</title>
+<title>Technology N Culture</title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
 </head>
 <body>
 <div class ="container"><br />
+<h1 id="heading">TNC-to be changed</h1><br />
 <div id="form-details">
 <form action='crawl.php'>
 <span id = "select-option">Select Please:</span>
