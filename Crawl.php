@@ -8,7 +8,7 @@
 <body>
 <div class ="container"><br />
 <h1>xCulture</h1><br />
-<div id="form-details">
+<!--<div id="form-details">
 <form action='crawl.php'>
 <span id = "select-option">Select Please:</span>
 <select id="countries" name="cat">
@@ -26,14 +26,49 @@
 <br>
 <input type="submit" class="btn btn-success">
 </form>
-</div>
+</div> -->
+
+<?php
+
+//echo "recieved country names : ";
+//print_r(join(",",array_values($countries)));
+?>
+
 <table class="table">
 
 <?php
 include "Crawler.php";
-if(isset($_GET["cat"]))
+
+
+
+
+
+/********************   Data recived from map *********************/
+
+if(isset($_GET["data"]) and !empty($_GET["data"]))
 {
-$cat = $_GET["cat"];
+$countries = explode('$',$_GET['data']);
+$length = sizeof($countries);
+}
+
+
+
+/*********************  use this; edit from here **********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 echo "<legend id=\"legend\">About ".$cat."</legend>";
 $url = "http://www.kwintessential.co.uk/resources/global-etiquette/$cat-country-profile.html";
 $html= file_get_contents($url);
@@ -67,9 +102,7 @@ break;
 </table>
 <?php
 
-$countries = explode('$',$_GET['data']);
-echo "recieved country names : ";
-print_r(join(",",array_values($countries)));
+
 
 ?>
 </br>
