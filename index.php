@@ -145,7 +145,7 @@ foreach( $count as $value )
 $url = "http://www.kwintessential.co.uk/resources/global-etiquette/$cat-country-profile.html";
 $url1 = "http://www.kwintessential.co.uk/resources/global-etiquette/$cat.html";
 if($flag == 1)
-    $html= file_get_contents($url);
+    $html= @file_get_contents($url);
 else
   $html= @file_get_contents($url1);  
 if($html === FALSE) 
