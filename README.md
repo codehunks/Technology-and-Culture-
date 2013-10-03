@@ -1,14 +1,18 @@
 Technology & Culture
 ====================
 
-A simple project demonstrating a World wide countries' search for their culture and technology.
+A project demonstrating a World wide countries search for their culture, facts and figures.
 
-Work to be done
----------------
+Features
+========
 
-1. Integrate Maps 
-2. Maps binding with callbacks
-3. Crawled data in precise form - formatted one to ease displaying
+Js Map 
+Comparison of culture and figures of different countries.
+
+Technologies
+============
+
+Php, Javascript, Bootstrap CSS
 
 
-
+<a href="http://shivambansal.com/technology_and_culture/">Live Demo</a>
