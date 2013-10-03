@@ -108,6 +108,8 @@ $dom = new DOMDocument();
 @$dom->loadHTML($html);
 $xPath = new DOMXPath($dom);
 $elements = $xPath->query("//strong");
+
+//displaying part for a selected country
 echo "<legend id=\"legend\">Culture About ".$cat."</legend>";
 echo '<table id=table1 class="table"><tr>';
 $x=0;
@@ -141,7 +143,7 @@ echo '</table>';
 </table>
 </br>
    <div class="navbar navbar-fixed-bottom">
-   <div class="container text-center">&copy. 2013 codehunks. All rights reserved</div>
+   <div class="container text-center"> &copy. 2013 codehunks. All rights reserved</div>
 </div>
 </div>
 </div>
